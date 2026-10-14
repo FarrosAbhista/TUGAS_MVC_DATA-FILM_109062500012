@@ -42,10 +42,10 @@ class FilmController {
         exit;
     }
 
-    public function delete() {
+    public function delete(): void {
         $id = (int) ($_POST['id'] ?? 0);
         $this->model->delete($id);
-        header('Location: index.php');
+        header('Location: index.php?page=film');
         exit;
     }
 
